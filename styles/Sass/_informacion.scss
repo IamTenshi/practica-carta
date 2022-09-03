@@ -1,0 +1,129 @@
+.informacion{
+    margin-top: -8vh;
+    display: flex;
+    flex-direction: column;
+    width: $all;
+    border-radius: 0rem 0rem 1rem 1rem;
+
+    h2, h3, h4, h5{
+        font-family: 'Rubik';
+        font-weight: 400;
+    }
+
+    .nombre-ciudad{
+        @include flex(column);
+        width: $all;
+        height: 17.5vh;
+        padding: 1.5vh 0 1vh 0;
+
+        .nombre{
+            @include flex;
+            @include po;
+            right: .55vw;
+            bottom: 1.5vh;
+
+            h3{
+                color: $negro1;
+                font-weight: 500;
+                font-size: 1.25em;
+                margin-left: 1.65em;
+            }
+
+            .editar-nombre{
+                @include flex;
+                @include po;
+                top: .1vh;
+                margin-left: .25em;
+                transition: transform .05s;
+                color: $negro00;
+
+                &:hover{
+                    @include editar-hover;
+                }
+
+                &:active{
+                    transform: scale(95%);
+                }
+            }
+
+            #h3_nombre:hover ~ .editar-nombre{
+                color: $negro05;
+            }
+        }
+
+        .ciudad{
+            @include flex;
+            @include po;
+            left: .6vw;
+            bottom: 1.5vh;
+
+            .editar-ciudad{
+                @include po;
+                @include active-transform;
+                bottom: 1.75vh;
+                left: .2vw;
+                color: $negro00;
+
+                &:hover{
+                    @include editar-hover;
+                }
+
+            }
+
+            #h4_ciudad{
+                margin-top: -1vh;
+                color: $negro05;
+                font-weight: 500;
+                font-size: .8em;
+
+                &:hover ~ .editar-ciudad{
+                    color: $negro05;
+                }
+            }
+        }
+    }
+
+    hr{
+        width: 99%;
+        height: 1px;
+        border: none;
+        background-color: $negro02;
+        margin-top: -1vh;
+    }
+
+    .follow-like-photo{
+        width: $all;
+        @include flex;
+        border-radius: 0rem 0rem 1rem 1rem;
+        padding-bottom: 1vh;
+
+        .flp{
+            @include flex(column);
+            width: 4.5vw;
+            @include po;
+            margin: 0 2vw;
+
+            h2{
+                font-weight: 500;
+                font-size: 1em;
+                @include po;
+                top: 3vh;
+            }
+
+            h5{
+                @include po;
+                @include active-transform;
+                letter-spacing: .05em;
+                font-weight: 400;
+                font-size: .8em;
+                bottom: 1.5vh;
+                transition: transform .025s;
+
+                &:hover{
+                    transform: scale(105%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

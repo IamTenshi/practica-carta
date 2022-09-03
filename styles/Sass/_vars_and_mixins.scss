@@ -1,0 +1,33 @@
+@mixin flex ($cr:row){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $cr;
+}
+
+@mixin editar-hover {
+    transform: scale(105%);
+    color: $negro075;
+    cursor: pointer;
+}
+
+@mixin po {
+    position: relative;
+}
+
+@mixin active-transform {
+    &:active{
+        transform: scale(95%);
+    }
+}
+
+//variables de colores
+$blanco: rgb(255, 255, 255);
+$negro00: rgba(0, 0, 0, 0);
+$negro02: rgba(0, 0, 0, .2);
+$negro05: rgba(0, 0, 0, .5);
+$negro075: rgba(0, 0, 0, .75);
+$negro1: rgb(0, 0, 0);
+
+//variables de tamaño
+$all: 100%;
